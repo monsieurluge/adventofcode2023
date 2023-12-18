@@ -1,0 +1,35 @@
+{
+  "name": "adventofcode2023",
+  "version": "1.0.0",
+  "description": "advent of code 2023",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/**/*.test.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monsieurluge/adventofcode2023.git"
+  },
+  "keywords": [
+    "advent",
+    "code",
+    "challenge",
+    "puzzle",
+    "2023"
+  ],
+  "author": "monsieurluge",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/monsieurluge/adventofcode2023/issues"
+  },
+  "homepage": "https://github.com/monsieurluge/adventofcode2023#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "tape": "^5.7.2"
+  }
+}
