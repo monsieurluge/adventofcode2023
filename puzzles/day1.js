@@ -16,3 +16,9 @@ export const lastDigit = (word) => {
     const reversedWord = word.split('').reverse().join('')
     return firstDigit(reversedWord)
 }
+
+export const calibration = (word) => {
+    const first = firstDigit(word)
+    const last = lastDigit(word)
+    return Number(`${first}${last}`)
+}
