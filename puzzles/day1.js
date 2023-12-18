@@ -17,8 +17,10 @@ export const lastDigit = (word) => {
     return firstDigit(reversedWord)
 }
 
-export const calibration = (word) => {
+export const lineCalibration = (word) => {
     const first = firstDigit(word)
     const last = lastDigit(word)
     return Number(`${first}${last}`)
 }
+
+export const calibration = (lines) => lines.map(lineCalibration).reduce((total, value) => total + value, 0)
