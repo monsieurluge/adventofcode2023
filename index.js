@@ -1,19 +1,17 @@
-import fs from 'fs'
-import { calibration } from './puzzles/day1.js'
+import day1 from './puzzles/day1/day1.js'
 
-const lineBreak = /\r?\n/
+const resolvers = new Map([
+    ['day1', day1.resolve],
+])
 
-const args = process.argv.slice(2)
+const requestedResolver = process.argv[2]
 
-export const fileCalibration = (file) => {
-    const lines = fs.readFileSync(file, 'utf-8').split(lineBreak).filter(line => line.length !== 0)
-    return calibration(lines)
+if (!resolvers.has(requestedResolver)) {
+    throw new Error(`unknown resolver name: "${requestedResolver}"`)
 }
 
-if (args.length === 0) {
-    throw new Error('the file name is required as first argument')
-}
+const resolver = resolvers.get(requestedResolver)
 
-const day1Response = fileCalibration(args[0])
+const response = resolver(...process.argv.slice(3))
 
-console.log(day1Response)
+console.log(response)

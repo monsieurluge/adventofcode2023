@@ -1,3 +1,5 @@
+import { lines } from '../common/file.js'
+
 const digitsRegExp = /\D*(\d)/
 
 export const firstDigit = (word) => {
@@ -20,3 +22,9 @@ export const lastDigit = (word) => {
 export const lineCalibration = (word) => firstDigit(word) * 10 + lastDigit(word)
 
 export const calibration = (lines) => lines.map(lineCalibration).reduce((total, value) => total + value, 0)
+
+export const resolve = (file) => calibration(lines(file))
+
+export default Object.freeze({
+    resolve,
+})

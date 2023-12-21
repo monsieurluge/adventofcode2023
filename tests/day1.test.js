@@ -1,5 +1,5 @@
 import { test } from 'tape'
-import { lineCalibration, firstDigit, lastDigit, calibration } from '../puzzles/day1.js'
+import { lineCalibration, firstDigit, lastDigit, calibration } from '../puzzles/day1/day1.js'
 
 test('firstDigit function should return the fist digit of a given string', (expect) => {
     // arrange
