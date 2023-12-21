@@ -2,7 +2,7 @@ import { lines } from '../../common/file.js'
 
 const digitsRegExp = /\D*(\d)/
 
-export const firstDigit = (word) => {
+const firstDigit = (word) => {
     const matches = digitsRegExp.exec(word)
     if (!Array.isArray(matches) || matches.length < 2) {
         throw new Error(`no digit found in "${word}"`)
@@ -14,7 +14,7 @@ export const firstDigit = (word) => {
     return digit
 }
 
-export const lastDigit = (word) => {
+const lastDigit = (word) => {
     const reversedWord = word.split('').reverse().join('')
     return firstDigit(reversedWord)
 }
@@ -26,5 +26,7 @@ export const calibration = (lines) => lines.map(lineCalibration).reduce((total, 
 export const resolve = (file) => calibration(lines(file))
 
 export default Object.freeze({
+    calibration,
+    lineCalibration,
     resolve,
 })
