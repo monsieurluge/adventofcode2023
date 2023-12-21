@@ -4,8 +4,8 @@
   "description": "advent of code 2023",
   "main": "index.js",
   "scripts": {
-    "day1": "node index.js day1 ./puzzles/day1/day1.input.txt",
-    "test": "tape puzzles/**/*.test.js",
+    "day1": "node index.js day1 ./src/puzzles/day1/day1.input.txt",
+    "test": "tape src/puzzles/**/*.test.js",
     "setup-hooks": "cp scripts/git-hooks/* .git/hooks && chmod +x .git/hooks/* && echo 'git hooks copied'"
   },
   "type": "module",

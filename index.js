@@ -1,4 +1,4 @@
-import day1 from './puzzles/day1/day1.js'
+import day1 from './src/puzzles/day1/day1.js'
 
 const resolvers = new Map([
     ['day1', day1],
