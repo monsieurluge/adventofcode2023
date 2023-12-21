@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "day1": "node index.js day1 ./puzzles/day1/day1.input.txt",
-    "test": "tape tests/**/*.test.js"
+    "test": "tape puzzles/**/*.test.js"
   },
   "type": "module",
   "repository": {

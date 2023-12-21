@@ -1,4 +1,4 @@
-import { lines } from '../common/file.js'
+import { lines } from '../../common/file.js'
 
 const digitsRegExp = /\D*(\d)/
 
