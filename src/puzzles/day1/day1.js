@@ -25,8 +25,8 @@ const validDigits = new Map([
     ['nine', 9],
 ])
 
-const firstDigit = (word) => {
-    const matches = firstDigitRegExp.exec(word)
+const digitFromRegexp = (regexp) => (word) => {
+    const matches = regexp.exec(word)
     if (!Array.isArray(matches) || matches.length < 2) {
         throw new Error(`no digit found in "${word}"`)
     }
@@ -37,17 +37,9 @@ const firstDigit = (word) => {
     return validDigits.get(digit)
 }
 
-const lastDigit = (word) => {
-    const matches = lastDigitRegExp.exec(word)
-    if (!Array.isArray(matches) || matches.length < 2) {
-        throw new Error(`no digit found in "${word}"`)
-    }
-    const digit = matches[1]
-    if (!validDigits.has(digit)) {
-        throw new Error(`the first result is not a number, found: ${digit}`)
-    }
-    return validDigits.get(digit)
-}
+const firstDigit = digitFromRegexp(firstDigitRegExp)
+
+const lastDigit = digitFromRegexp(lastDigitRegExp)
 
 export const lineCalibration = (word) => firstDigit(word) * 10 + lastDigit(word)
 
