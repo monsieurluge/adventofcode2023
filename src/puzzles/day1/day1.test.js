@@ -1,7 +1,7 @@
 import { test } from 'tape'
 import { calibration, lineCalibration } from './day1.js'
 
-test('line calibration function should join the first and last digits encountered in a string', (expect) => {
+test('line calibration function should join the first and last digits encountered in a string', (assert) => {
     // arrange
     const string1 = 'two1nine'
     const string2 = 'eightwothree'
@@ -19,26 +19,26 @@ test('line calibration function should join the first and last digits encountere
     const result6 = lineCalibration(string6)
     const result7 = lineCalibration(string7)
     // assert
-    expect.equal(result1, 29)
-    expect.equal(result2, 83)
-    expect.equal(result3, 13)
-    expect.equal(result4, 24)
-    expect.equal(result5, 42)
-    expect.equal(result6, 14)
-    expect.equal(result7, 76)
-    expect.end()
+    assert.equal(result1, 29)
+    assert.equal(result2, 83)
+    assert.equal(result3, 13)
+    assert.equal(result4, 24)
+    assert.equal(result5, 42)
+    assert.equal(result6, 14)
+    assert.equal(result7, 76)
+    assert.end()
 })
 
-test('line calibration function should crash if the line is empty', (expect) => {
+test('line calibration function should crash if the line is empty', (assert) => {
     // arrange
     const emptyLine = ''
     // act
     // assert
-    expect.throws(() => lineCalibration(emptyLine))
-    expect.end()
+    assert.throws(() => lineCalibration(emptyLine))
+    assert.end()
 })
 
-test('calibration function should apply the line calibration on each line and add the values', (expect) => {
+test('calibration function should apply the line calibration on each line and add the values', (assert) => {
     // arrange
     const lines = [
         'two1nine',
@@ -52,6 +52,6 @@ test('calibration function should apply the line calibration on each line and ad
     // act
     const result = calibration(lines)
     // assert
-    expect.equal(result, 281)
-    expect.end()
+    assert.equal(result, 281)
+    assert.end()
 })
