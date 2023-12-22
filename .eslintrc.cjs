@@ -11,6 +11,7 @@ module.exports = {
         sourceType: 'module'
     },
     rules: {
+        'block-spacing': ['error', 'always'],
         'comma-dangle': ['error', 'always-multiline'],
         indent: ['error', 4]
     }
