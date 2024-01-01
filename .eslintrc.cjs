@@ -1,18 +1,18 @@
 module.exports = {
     env: {
-        browser: true,
-        es2021: true
+        es2021: true,
+        node: true,
     },
     extends: [
-        'standard'
+        'standard',
     ],
     parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module'
+        sourceType: 'module',
     },
     rules: {
         'block-spacing': ['error', 'always'],
         'comma-dangle': ['error', 'always-multiline'],
-        indent: ['error', 4]
-    }
+        indent: ['error', 4],
+    },
 }
