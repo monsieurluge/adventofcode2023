@@ -14,5 +14,13 @@ module.exports = {
         'block-spacing': ['error', 'always'],
         'comma-dangle': ['error', 'always-multiline'],
         indent: ['error', 4],
+        'space-before-function-paren': [
+            'error',
+            {
+                anonymous: 'always',
+                asyncArrow: 'always',
+                named: 'never',
+            },
+        ],
     },
 }

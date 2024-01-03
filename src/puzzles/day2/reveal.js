@@ -1,6 +1,6 @@
 const emptySet = { red: 0, green: 0, blue: 0 }
 
-export function Reveal (configuration) {
+export function Reveal(configuration) {
     const emptyBagContent = {
         blue: 0,
         green: 0,

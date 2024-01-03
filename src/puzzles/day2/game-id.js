@@ -1,6 +1,6 @@
 const gameIdRegExp = /^Game (\d+):/
 
-export function GameId (configuration) {
+export function GameId(configuration) {
     const value = () => {
         const matches = gameIdRegExp.exec(configuration)
         if (!matches || matches.length < 2) {

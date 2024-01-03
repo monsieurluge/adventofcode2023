@@ -1,4 +1,4 @@
-export function Game (configuration) {
+export function Game(configuration) {
     const isPossible = () => true
 
     return Object.freeze({
