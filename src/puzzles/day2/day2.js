@@ -8,10 +8,12 @@ const resolve = (inputFile) => {
     const configurations = lines(inputFile)
     return configurations.reduce((total, configuration) => {
         const game = Game(configuration)
-        return game.isPossible(bag)
-            ? total + game.id()
-            : total
-    }, 0)
+        const requirements = game.requirements()
+        return {
+            ids: game.isPossible(bag) ? total.ids + game.id() : total.ids,
+            requirements: total.requirements + (requirements.blue * requirements.red * requirements.green)
+        }
+    }, { ids: 0, requirements: 0 })
 }
 
 export default Object.freeze({
