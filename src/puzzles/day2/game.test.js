@@ -23,3 +23,13 @@ test('a game should not be possible if some of the revealed colors exceed those 
     assert.equal(isPossible, false)
     assert.end()
 })
+
+test('a game should tell its ID', (assert) => {
+    // arrange
+    const game = Game('Game 13: 2 green, 6 red; 6 red, 5 blue; 7 red, 3 blue, 8 green; 7 red, 8 green; 3 blue, 2 green, 3 red; 1 blue, 8 red, 6 green')
+    // act
+    const id = game.id()
+    // assert
+    assert.equal(id, 13)
+    assert.end()
+})
