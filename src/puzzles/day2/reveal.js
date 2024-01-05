@@ -29,9 +29,9 @@ export function Reveal(configuration) {
 
     const validSets = ({ red, green, blue } = emptyBagContent) => {
         return sets().every((set) => {
-            return set.blue <= blue &&
-                 set.green <= green &&
-                 set.red <= red
+            return set.blue <= blue
+                 && set.green <= green
+                 && set.red <= red
         })
     }
 

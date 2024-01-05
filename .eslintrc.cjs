@@ -14,6 +14,7 @@ module.exports = {
         'block-spacing': ['error', 'always'],
         'comma-dangle': ['error', 'always-multiline'],
         indent: ['error', 4],
+        'operator-linebreak': ['error', 'before'],
         'space-before-function-paren': [
             'error',
             {
